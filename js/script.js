@@ -63,5 +63,10 @@ new Vue({
                 this.starred.push(index);
             }
         },
+        addApply: function(index) {
+            if (!this.applied.includes(index)) {
+                this.applied.push(index);
+            }
+        }
     }
 });
