@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 
@@ -17,12 +17,15 @@
 
     <div id="app">
 
-        <div v-for="job in jobs">
+        <div v-for="(job,index) in jobs">
             <h1>{{job.id}} {{job.company}} </h1>
             <h3>{{job.position}}</h3>
             <p>{{job.description}}</p>
             <h3>{{job.city}}</h3>
             <h4>{{job.contract}}</h4>
+            <span>{{job.created_at}}</span>
+            <i v-if="!starred.includes(index)" class="far fa-star"></i>
+            <i v-else class="fas fa-star"></i>
         </div>
 
     </div>
