@@ -58,6 +58,10 @@ new Vue({
         applied: [4, 5]
     },
     methods: {
-
+        addStar: function(index) {
+            if (!this.starred.includes(index)) {
+                this.starred.push(index);
+            }
+        },
     }
 });
