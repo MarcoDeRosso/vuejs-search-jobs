@@ -64,7 +64,7 @@ new Vue({
                 contract: 'Full-Time'
             },
         ],
-        starred: [1, 2, 3],
+        starred: [1, 3],
         applied: [4, 6],
         displayApplied: "none",
 

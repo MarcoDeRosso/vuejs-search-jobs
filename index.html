@@ -17,9 +17,10 @@
 <body>
     <div class="container">
         <div class="row" id="app">
-            <div class="col-7 job-container m-3">
+            <div class="col-7 job-container m-3  text-center">
+                <h1>Job Opportunities</h1>
                 <div class="job-offer" v-for="(job,index) in jobs">
-                    <h1>{{job.company}} </h1>
+                    <h2>{{job.company}} </h2>
                     <h3>{{job.position}}</h3>
                     <p>{{job.description}}</p>
                     <h3>{{job.city}}</h3>
@@ -33,17 +34,19 @@
             </div>
             <div class="col-4">
                 <div class="row">
-                    <div class="col-12 starred-container m-3">
+                    <div class="col-12 starred-container m-3 text-center">
+                        <h1>Favorite jobs:</h1>
                         <div class="job-offer" v-for="(job,index) in jobs" v-if="starred.includes(job.id)">
-                            <h1>{{job.company}} </h1>
+                            <h2>{{job.company}} </h2>
                             <h3>{{job.position}}</h3>
                             <h4>{{job.contract}}</h4>
                             <span>{{job.created_at}}</span>
                         </div>
                     </div>
-                    <div class="col-12 applied-container m-3">
+                    <div class="col-12 applied-container m-3 text-center">
+                        <h1>Applied jobs:</h1>
                         <div class="job-offer" v-for="(job,index) in jobs" v-if="applied.includes(job.id)">
-                            <h1>{{job.company}} </h1>
+                            <h2>{{job.company}} </h2>
                             <h3>{{job.position}}</h3>
                             <h4>{{job.contract}}</h4>
                             <span>{{job.created_at}}</span>
@@ -51,7 +54,7 @@
                     </div>
                 </div>
             </div>
-            <div :class="displayApplied" class="modal">Your application has been sent successfully!</div>
+            <div :class="displayApplied" class="pop-up">Your application has been sent successfully!</div>
         </div>
     </div>
 
