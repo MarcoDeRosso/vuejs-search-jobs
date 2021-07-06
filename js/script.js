@@ -66,7 +66,7 @@ new Vue({
         ],
         starred: [1, 2, 3],
         applied: [4, 6],
-        displayApplied: "none"
+        displayApplied: "none",
 
     },
     methods: {
@@ -74,6 +74,7 @@ new Vue({
             if (!this.starred.includes(index)) {
                 this.starred.push(index);
             }
+
         },
         removeStar: function(index) {
             if (this.starred.includes(index)) {
