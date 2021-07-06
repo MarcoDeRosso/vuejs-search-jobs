@@ -55,7 +55,8 @@ new Vue({
             },
         ],
         starred: [1, 2, 3],
-        applied: [4, 5]
+        applied: [4, 5],
+
     },
     methods: {
         addStar: function(index) {
@@ -63,10 +64,18 @@ new Vue({
                 this.starred.push(index);
             }
         },
+        removeStar: function(index) {
+            if (this.starred.includes(index)) {
+                let star = this.starred.indexOf(index);
+                this.starred.splice(star, 1);
+            }
+        },
         addApply: function(index) {
             if (!this.applied.includes(index)) {
                 this.applied.push(index);
             }
+            let star = this.starred.indexOf(index);
+            this.starred.splice(star, 1);
         }
     }
 });
