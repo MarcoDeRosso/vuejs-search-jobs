@@ -30,7 +30,7 @@
                 <button @click="addApply(index+1)" v-if="!applied.includes(index+1)">APPLY</button>
                 <div class="bedge" v-else>APPLIED</div>
             </div>
-
+            <div :class="displayApplied" class="modal">Your application has been sent successfully!</div>
         </div>
     </div>
 

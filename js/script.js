@@ -53,9 +53,20 @@ new Vue({
                 city: 'Faenza',
                 contract: 'Full-Time'
             },
+            {
+                id: 6,
+                company: 'Minardi',
+                position: 'Developer',
+                description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veniam similique adipisci! Perferendis odio sapiente libero quam deleniti quidem consequuntur adipisci minima non iusto, sunt optio hic. Corporis, laboriosam perferendis?',
+                created_at: '6/25/2021',
+                logo: 'logo.jpg',
+                city: 'Faenza',
+                contract: 'Full-Time'
+            },
         ],
         starred: [1, 2, 3],
-        applied: [4, 5],
+        applied: [4, 6],
+        displayApplied: "none"
 
     },
     methods: {
@@ -76,6 +87,18 @@ new Vue({
             }
             let star = this.starred.indexOf(index);
             this.starred.splice(star, 1);
+            this.display();
+        },
+        display: function() {
+            setTimeout(() => {
+                this.displayApplied = "block";
+                this.notDisplay();
+            }, 1000)
+        },
+        notDisplay: function() {
+            setTimeout(() => {
+                this.displayApplied = "none";
+            }, 2000)
         }
     }
 });
