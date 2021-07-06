@@ -24,7 +24,7 @@
             <h3>{{job.city}}</h3>
             <h4>{{job.contract}}</h4>
             <span>{{job.created_at}}</span>
-            <i v-if="!starred.includes(index)" class="far fa-star"></i>
+            <i v-if="!starred.includes(index+1)" class="far fa-star"></i>
             <i v-else class="fas fa-star"></i>
         </div>
 
