@@ -17,9 +17,13 @@
 
     <div id="app">
 
-        <ul v-for="job in jobs">
-            <li>{{job.id}} {{job.company}} {{job.position}} {{job.description}}</li>
-        </ul>
+        <div v-for="job in jobs">
+            <h1>{{job.id}} {{job.company}} </h1>
+            <h3>{{job.position}}</h3>
+            <p>{{job.description}}</p>
+            <h3>{{job.city}}</h3>
+            <h4>{{job.contract}}</h4>
+        </div>
 
     </div>
 
