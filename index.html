@@ -26,9 +26,9 @@
                     <h3>{{job.city}}</h3>
                     <h4>{{job.contract}}</h4>
                     <span>{{job.created_at}}</span>
-                    <i v-if="!starred.includes(index+1)" class="far fa-star" @click="addStar(index+1)"></i>
-                    <i v-else class="fas fa-star" @click="removeStar(index+1)"></i>
-                    <button class="btn btn-danger" @click="addApply(index+1)" v-if="!applied.includes(index+1)">APPLY</button>
+                    <i v-if="!starred.includes(job.id)" class="far fa-star" @click="addStar(job.id)"></i>
+                    <i v-else class="fas fa-star" @click="removeStar(job.id)"></i>
+                    <button class="btn btn-danger" @click="addApply(job.id)" v-if="!applied.includes(job.id)">APPLY</button>
                     <div class="bedge" v-else>APPLIED</div>
                 </div>
             </div>

@@ -70,15 +70,15 @@ new Vue({
 
     },
     methods: {
-        addStar: function(index) {
-            if (!this.starred.includes(index)) {
-                this.starred.push(index);
+        addStar: function(job) {
+            if (!this.starred.includes(job)) {
+                this.starred.push(job);
             }
 
         },
-        removeStar: function(index) {
-            if (this.starred.includes(index)) {
-                let star = this.starred.indexOf(index);
+        removeStar: function(job) {
+            if (this.starred.includes(job)) {
+                let star = this.starred.indexOf(job);
                 this.starred.splice(star, 1);
             }
         },
